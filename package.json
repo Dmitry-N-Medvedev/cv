@@ -1,0 +1,26 @@
+{
+  "name": "@dmitry-n-medvedev/cv",
+  "version": "0.0.0",
+  "description": "cv",
+  "type": "module",
+  "packageManager": "pnpm@8.14.2",
+  "engines": {
+    "node": ">=21.4.0",
+    "pnpm": "8.14.2"
+  },
+  "engineStrict": true,
+  "scripts": {
+    "preinstall": "npx only-allow pnpm"
+  },
+  "keywords": [],
+  "author": "Dmitry N. Medvedev <dmitry.medvedev@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dmitry-n-medvedev/cv.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dmitry-n-medvedev/cv/issues"
+  },
+  "homepage": "https://github.com/dmitry-n-medvedev/cv#readme"
+}
