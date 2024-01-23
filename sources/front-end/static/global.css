@@ -9,12 +9,14 @@
   --border-radius: 0.25rem;
   --transition-duration: 0.125s;
   --footer-background-color: transparent;
+  --gap: 1rem;
 }
 
 @media(prefers-color-scheme: light) {
   :root {
     --main-color: var(--theme-dark_gray);
     --main-background-color: var(--theme-white);
+    --border: 0.25rem solid var(--theme-light_gray_bright);
   }
 }
 
@@ -22,6 +24,7 @@
   :root {
     --main-color: var(--theme-white);
     --main-background-color: var(--theme-dark_gray);
+    --border: 0.25rem solid var(--theme-darkest_white);
   }
 }
 
