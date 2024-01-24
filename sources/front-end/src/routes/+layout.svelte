@@ -8,7 +8,8 @@
   .layout-root {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr auto;
+    /* grid-template-rows: auto 1fr auto; */
+    grid-template-rows: 1fr;
     grid-template-areas:
       'header-container'
       'main'
@@ -17,9 +18,9 @@
     gap: 1rem;
   
 
-    height: 100svh;
+    /* height: 100svh; */
     min-height: 100svh;
-    max-height: 100svh;
+    /* max-height: 100svh; */
   }
 
   .header-container {
@@ -32,7 +33,6 @@
 
   main {
     grid-area: main;
-    overflow: hidden;
   }
 
   .footer-container {
@@ -48,12 +48,12 @@
 
 <div class="layout-root">
   <div class="header-container">
-    <Header />
+    <!-- <Header /> -->
   </div>
   <main>
-	  <slot />
+    <slot />
   </main>
   <div class="footer-container">
-    <Footer />
+    <!-- <Footer /> -->
   </div>
 </div>

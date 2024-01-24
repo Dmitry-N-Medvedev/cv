@@ -7,89 +7,103 @@
   import KeySkills from '$lib/components/KeySkills/KeySkills.svelte';
   import Training from '$lib/components/Training/Training.svelte';
   import Experience from '$lib/components/Experience/Experience.svelte';
+  import Me from '$lib/images/me.jpeg';
 </script>
 
 <style>
-  article {
+  .cv {
     display: grid;
-    grid-template-columns: 1fr 7fr;
-    grid-auto-rows: max-content;
+    grid-template-columns: 1fr 3fr;
     grid-template-areas:
-      'contact professional-summary'
-      'education experience'
-      'career-highlights experience'
-      'expertise experience'
-      'key-skills experience'
-      'training experience'
+      'aside header'
+      'aside content'
     ;
+    grid-template-rows: clamp(20rem, 25rem, 30rem) auto;
   
-    gap: var(--gap);
     margin: 0 auto;
 
     min-height: 100%;
-    max-width: 75%;
+    max-width: 50%;
   }
 
-  article > .contact {
-    grid-area: contact;
+  .cv > .aside {
+    grid-area: aside;
+    display: grid;
+    grid-template-rows: max-content;
+    grid-auto-flow: row;
+    background-color: var(--background-highlight-color);
+    padding: 0 calc(var(--gap) * 3);
   }
 
-  article > .professional-summary {
-    grid-area: professional-summary;
+  .cv > .aside > .photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  article > .education {
-    grid-area: education;
+  .cv > .aside > .photo > img {
+    border-radius: 50%;
+    width: 90%;
+    padding: var(--gap);
   }
 
-  article > .career-highlights {
-    grid-area: career-highlights;
+  .cv > .header {
+    grid-area: header;
+    display: grid;
+    grid-template-areas:
+      '.'
+      'name'
+      'title'
+      '.'
+    ;
+    grid-template-rows: 3rem 1fr 1fr 3rem;
   }
 
-  article > .expertise {
-    grid-area: expertise;
+  .cv > .header > .name {
+    grid-area: name;
+    background-color: var(--background-highlight-color);
   }
 
-  article > .key-skills {
-    grid-area: key-skills;
+  .cv > .header > .title {
+    grid-area: title;
+    background-color: var(--background-highlight-color);
   }
 
-  article > .training {
-    grid-area: training;
+  .cv > .header > :is(.name, .title) {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0 calc(var(--gap) * 2);
   }
 
-  article > .experience {
-    grid-area: experience;
-  }
-
-  article > section {
+  .cv > .content {
+    grid-area: content;
     display: contents;
   }
 </style>
 
-<article>
-  <section class="contact">
+<article class="cv">
+  <aside class="aside">
+    <section class="photo">
+      <img src={Me} alt="profile" />
+    </section>
     <Contact />
-  </section>
-  <section class="professional-summary">
-    <ProfessionalSummary />
-  </section>
-  <section class="education">
-    <Education />
-  </section>
-  <section class="career-highlights">
     <CareerHighlights />
-  </section>
-  <section class="expertise">
     <Expertise />
-  </section>
-  <section class="key-skills">
     <KeySkills />
-  </section>
-  <section class="training">
+    <!-- <ProfessionalSummary /> -->
+    <!-- <Education /> -->
     <Training />
+  </aside>
+  <section class="header">
+    <h1 class="name">
+      Dmitry N Medvedev
+    </h1>
+    <h2 class="title">
+      project manager | cto
+    </h2>
   </section>
-  <section class="experience">
+  <article class="content">
     <Experience />
-  </section>
+  </article>
 </article>

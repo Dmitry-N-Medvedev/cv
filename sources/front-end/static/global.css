@@ -17,6 +17,9 @@
     --main-color: var(--theme-dark_gray);
     --main-background-color: var(--theme-white);
     --border: 0.25rem solid var(--theme-light_gray_bright);
+    --a-color: var(--theme-red);
+    --a-color-visited: var(--theme-red);
+    --background-highlight-color: var(--theme-darkest_white);
   }
 }
 
@@ -25,6 +28,9 @@
     --main-color: var(--theme-white);
     --main-background-color: var(--theme-dark_gray);
     --border: 0.25rem solid var(--theme-darkest_white);
+    --a-color: var(--theme-red);
+    --a-color-visited: var(--theme-red);
+    --background-highlight-color: var(--theme-light_gray);
   }
 }
 
@@ -65,8 +71,7 @@ body {
 
 h1, h2, h3, h4, h5 {
   text-transform: uppercase;
-  font-weight: 900;
-  font-variation-settings: "wght" 900, "opsz" 32;
+  font-variation-settings: "wght" 300, "opsz" 20;
 }
 
 h1 {
@@ -74,11 +79,11 @@ h1 {
 }
 
 h2 {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 h3 {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 h4 {
@@ -86,7 +91,7 @@ h4 {
 }
 
 h5 {
-  font-size: 1rem;
+  font-size: 1.75rem;
 }
 
 svg {
@@ -94,15 +99,11 @@ svg {
   user-select: none !important;
 }
 
-button {
-  max-width: 6rem;
-  width: 6rem;
-  max-height: 3.5rem;
-  height: 3.5rem;
-  cursor: pointer;
+a {
+  color: var(--a-color);
+  pointer-events: auto;
+}
 
-  background-color: var(--theme-green);
-  border-radius: var(--border-radius);
-  color: var(--main-background-color);
-  font-size: medium;
+a:visited {
+  color: var(--a-color-visited); 
 }
