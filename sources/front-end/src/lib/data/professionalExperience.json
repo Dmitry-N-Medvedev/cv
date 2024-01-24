@@ -1,0 +1,66 @@
+[
+    {
+      "id": 0,
+      "timeSpan": {
+        "from": "Mar 2021",
+        "to": "present time"
+      },
+      "company": {
+        "name": "Enercon",
+        "link": "https://www.enercon.de/en"
+      },
+      "position": {
+        "name": "Lead Software Engineer"
+      },
+      "short_description": "short description",
+      "responsibilities": [
+"advise on how to change the existing products and design new ones so that they are scalable and relatively cheap to enhance",
+"help choosing proper tools for specific problems",
+"advise on how internal processes could be changed to ensure the products solve exactly the customer’s problems, the software runs fast and eliminate waste on unnecessary ceremonies",
+"build a research lab to be used as a playground for software engineers to try out new tech",
+"interface with an external IT service provider to support software engineers"
+      ],
+      "results": [
+"an internal product that deals with fluid dynamics calculations has been redesigned from scratch in the form of a reactive system. This decision plays a crucial role both in how the system is being technically evolved and how the entire product is being managed nowadays",
+"You are welcome to ask me for details",
+"the rest of the products started slowly moving towards containerization ( Docker ) and Kubernetes on Microsoft Azure. Not a single one was containerized before",
+"I gave a few technical presentations on architecture to my colleagues. It is pleasant to see how the de facto standards have been welcomed among the software engineers. I hope in the near future such knowledge sharing will become a regular routine in our department"
+      ],
+      "team": {
+        "size": 15
+      }
+    },
+    {
+      "id": 1,
+      "timeSpan": {
+        "from": "Mar 2020",
+        "to": "Dec 2020"
+      },
+      "company": {
+        "name": "Coinhaven",
+        "link": "https://coinhaven.com/"
+      },
+      "position": {
+        "name": "Tech Lead | CTO"
+      },
+      "short_description": "short description",
+      "responsibilities": [
+
+      ],
+      "results": [
+"The team has been switched to the trunk-base development — this has shorten the feedback loop considerably",
+"Morning stand ups and predefined recurring meetings have been abandoned in favor of “live and on the spot communication”",
+"The CI/CD pipeline made 100% automatic and would run new code on testing, then staging, and finally on the production environments without human interference",
+"Production releases started to happen at least daily ( yes, even on Fridays )",
+"The stakeholders were tightly involved into the development and release process — this has further shortened the feedback loop and allowed us to be sure we developed exactly what the stakeholders wanted",
+"The back-end has been split into quite a few microservices using event-sourcing and CQRS — this has further shortened the feedback loop and made every single service tiny, easy to comprehend and test. As a side effect this has influenced security issues ( mostly authorization ) in the context of services",
+"The angular and then react have been ditched from the front-end and substituted with SvelteKit — this ensured the front-end was as lightweight as possible and ran fast in the web browser and on mobile devices",
+"HTTP methods have been substituted with websockets — this has simplified front-end — back-end communication enormously and ensured it was aligned with the rest of the system in terms of asynchronicity",
+"All the messages were turned from JSON into binary strictly typed flatbuffers — this removed the necessity to parse messages and with timely corking in place ensured the communications ran almost at the native speed",
+"TDD has been introduced to ensure the quality of the code and predictability of any possible changes"
+      ],
+      "team": {
+        "size": 15
+      }
+    }
+]
