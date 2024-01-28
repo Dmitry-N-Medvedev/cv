@@ -1,4 +1,5 @@
 <script>
+  import Tech from "./Tech.svelte";
 </script>
 
 <style>
@@ -7,8 +8,12 @@
     grid-template-columns: 1fr;
     grid-template-areas:
       'position-info'
+      'short-description'
+      'responsibilities'
+      'results'
     ;
     gap: var(--gap);
+    padding: var(--gap) 0;
   }
 
   :global(.row) {
@@ -34,6 +39,22 @@
     font-weight: 600;
   }
 
+  .experience-record > .short-description {
+    grid-area: short-description;
+  }
+
+  .experience-record > .responsibilities {
+    grid-area: responsibilities;
+  }
+  
+  .experience-record > .results {
+    grid-area: results;
+  }
+
+  :is(.short-description, .responsibilities, .results) {
+    padding: var(--gap) 0;
+  }
+
   .position-info .team-size {
     display: flex;
   }
@@ -50,7 +71,29 @@
       <div class="team-size">team:&nbsp;<slot name="team-size" /></div>
     </div>
   </div>
-  <slot name="short-description" />
-  <slot name="responsibilities" />
-  <slot name="results" />
+  <div class="short-description">
+    <slot name="short-description" />
+  </div>
+  <div class="responsibilities">
+    <h4>responsibilities</h4>
+    <slot name="responsibilities" />
+  </div>
+  <div class="results">
+    <h4>results</h4>
+    <slot name="results" />
+  </div>
+  <Tech>
+    <div slot="tech-languages">
+      <slot name="tech-languages" />
+    </div>
+    <div slot="tech-databases">
+      <slot name="tech-databases" />
+    </div>
+    <div slot="tech-os">
+      <slot name="tech-os" />
+    </div>
+    <div slot="tech-tools">
+      <slot name="tech-tools" />
+    </div>
+  </Tech>
 </div>

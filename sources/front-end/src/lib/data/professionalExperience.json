@@ -28,6 +28,23 @@
       ],
       "team": {
         "size": 15
+      },
+      "tech": {
+        "stack": {
+          "languages": [
+            "C#"
+          ],
+          "databases": [
+            "Microsoft SQL Server"
+          ],
+          "os": [
+            "Microsoft Windows"
+          ],
+          "tools": [
+            "Docker",
+            "Kubernetes"
+          ]
+        }
       }
     },
     {
@@ -61,6 +78,23 @@
       ],
       "team": {
         "size": 15
+      },
+      "tech": {
+        "stack": {
+          "languages": [
+            "C#"
+          ],
+          "databases": [
+            "Microsoft SQL Server"
+          ],
+          "os": [
+            "Microsoft Windows"
+          ],
+          "tools": [
+            "Docker",
+            "Kubernetes"
+          ]
+        }
       }
     }
 ]

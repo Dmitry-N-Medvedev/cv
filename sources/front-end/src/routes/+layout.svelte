@@ -9,7 +9,7 @@
     display: grid;
     grid-template-columns: 1fr;
     /* grid-template-rows: auto 1fr auto; */
-    grid-template-rows: 1fr;
+    grid-template-rows: max-content;
     grid-template-areas:
       'header-container'
       'main'

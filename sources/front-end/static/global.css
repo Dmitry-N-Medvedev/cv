@@ -70,28 +70,47 @@ body {
 }
 
 h1, h2, h3, h4, h5 {
+  --wght: 300;
+  /* opsz: 14 .. 32 */
+  --opsz: 14;
+
   text-transform: uppercase;
-  font-variation-settings: "wght" 300, "opsz" 20;
+  font-variation-settings: "wght" var(--wght), "opsz" var(--opsz);
 }
 
 h1 {
+  --wght: 900;
+  --opsz: 32;
+
   font-size: 5rem;
 }
 
 h2 {
-  font-size: 3rem;
+  --wght: 600;
+  --opsz: 28;
+
+  font-size: 4rem;
 }
 
 h3 {
-  font-size: 2.5rem;
+  --wght: 600;
+  --opsz: 24;
+
+  font-size: 3rem;
 }
 
 h4 {
+  --wght: 600;
+  --opsz: 24;
+
   font-size: 2rem;
 }
 
 h5 {
-  font-size: 1.75rem;
+  --wght: 600;
+  --opsz: 24;
+
+  font-size: 1.5rem;
 }
 
 svg {
