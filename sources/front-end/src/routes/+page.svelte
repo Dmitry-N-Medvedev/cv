@@ -78,7 +78,7 @@
 
   .cv > .content {
     grid-area: content;
-    display: contents;
+    /* display: contents; */
   }
 </style>
 

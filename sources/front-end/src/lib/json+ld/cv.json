@@ -1,0 +1,525 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "ProfilePage",
+  "mainEntity": {
+    "@id": "https://dmitry-n-medvedev.denebkaitos.tech",
+    "@type": "Person",
+    "name": "Dmitry N Medvedev",
+    "givenName": "Dmitry",
+    "familyName": "Medvedev",
+    "gender": "https://schema.org/Male",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Berlin"
+    },
+    "email": "dmitry.medvedev@gmail.com",
+    "image": "https://dmitry-n-medvedev.denebkaitos.tech/dmitry-n-medvedev.jpeg",
+    "url": "https://dmitry-n-medvedev.denebkaitos.tech",
+    "sameAs": [
+      "https://www.linkedin.com/in/dmitrymedvedev/"
+    ],
+    "honorificPrefix": "Mr.",
+    "isicV4": [
+      "62",
+      "6201",
+      "6202"
+    ],
+    "knowsLanguage": [
+      "en",
+      "ru"
+    ],
+    "knowsAbout": [
+      {
+        "name": "Allen Holub",
+        "description": "Allen Holub is an internationally recognized software architect and consultant/trainer focusing on organizational agility. He speaks all over the planet on these topics and agile-friendly implementation technology like microservices and incremental/evolutionary architecture, but his bread and butter is helping you create or improve highly functional Lean/Agile organizations, and helping you design and build software architectures suitable for agile environments. He provides both in-house training and consulting services. Allen started his career as a hardware engineer, but after being pressed into writing a compiler and real-time operating system for the robot his team was building, ended up a developer. He's helped with many commercial applications, web based and otherwise, and has served twice as a CTO for early-stage startups.",
+        "url": "https://holub.com/#about",
+        "image": "https://holub.com/wp/wp-content/uploads/2021/07/AllenHolubXparentBkgd.jpg",
+        "sameAs": [
+          "https://twitter.com/allenholub",
+          "https://en.wikipedia.org/wiki/Allen_Holub"
+        ]
+      },
+      {
+        "name": "Niels Pfläging",
+        "description": "Niels Pfläging is a passionate and thoughtful advocate for a new breed of leadership and profound change in organizations. He is an acclaimed speaker and author of several books, a co-founder and associate of the BetaCodex Network, and president of his own consulting firm based in New York and Wiesbaden.",
+        "url": "https://de.wikipedia.org/wiki/Niels_Pfl%C3%A4ging",
+        "image": "https://www.wikiwand.com/de/Niels_Pfl%C3%A4ging#Media/Datei:Niels_Pfl%C3%A4ging_mit_Buch_Zellstrukturdesign.jpg",
+        "sameAs": [
+          "https://betacodex.org/about/",
+          "https://twitter.com/NielsPflaeging",
+          "https://www.linkedin.com/in/niels-pflaeging-11a89/",
+          "https://www.redforty2.com/about",
+          "https://www.linkedin.com/company/red42-gmbh/",
+          "https://www.linkedin.com/company/betacodex-network/",
+          "https://betacodex.org/"
+        ]
+      },
+      "https://agilemanifesto.org/"
+    ],
+    "makesOffer": [
+      {
+        "@type": "Offer",
+        "businessFunction": "http://purl.org/goodrelations/v1#ProvideService",
+        "eligibleCustomerType": "http://purl.org/goodrelations/v1#Business",
+        "eligibleRegion": "Germany",
+        "name": "CTO",
+        "alternateName": "Director of Engineering",
+        "description": "I am fully committed to offer my client...",
+        "url": "https://dmitry-n-medvedev.denebkaitos.tech/offer/cto",
+        "itemOffered": [
+          {
+            "@type": "Service",
+            "areaServed": "Germany",
+            "serviceType": "top management",
+            "termsOfService": "https://dmitry-n-medvedev.denebkaitos.tech/tos/cto",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": 90000,
+              "maxPrice": 150000,
+              "priceCurrency": "EUR"
+            }
+          }
+        ]
+      }
+    ],
+    "hasCredential": [
+      {
+        "@type": "EducationalOccupationalCredential",
+        "recognizedBy": {
+          "@type": "Organization",
+          "name": "Cognitive Class",
+          "url": "https://cognitiveclass.ai/"
+        },
+        "name": "Reactive Architecture: Introduction to Reactive Systems",
+        "credentialCategory": "certificate",
+        "educationalLevel": "advanced",
+        "dateCreated": "2019-01-23",
+        "url": "https://courses.cognitiveclass.ai/certificates/6dbca7efaa2b4dcbb4008a8755e1dfc1"
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "recognizedBy": {
+          "@type": "Organization",
+          "name": "Redis University",
+          "url": "https://university.redis.com/"
+        },
+        "name": "RU202: Redis Streams",
+        "credentialCategory": "certificate",
+        "educationalLevel": "advanced",
+        "dateCreated": "2019-05-22",
+        "url": "https://university.redis.com/certificates/0bb96c58f8004b59bacb5aa19eb7c9fe"
+      }
+    ],
+    "colleague": [
+      "https://www.linkedin.com/in/empbld/",
+      "https://www.linkedin.com/in/vzamyatin/",
+      "https://www.linkedin.com/in/fedorvirin/",
+      "https://www.linkedin.com/in/eugenekaspersky/",
+      "https://www.linkedin.com/in/george-bardmesser-514b95/",
+      "https://www.linkedin.com/in/vincent-power-914480136/",
+      "https://www.linkedin.com/in/benjaminpeterjones/",
+      "https://www.linkedin.com/in/oliver-weigel-2186b421/",
+      "https://www.linkedin.com/in/studiofabuloso/",
+      "https://www.linkedin.com/in/gouchtchina/",
+      "https://www.linkedin.com/in/tim-rehder-842a9596/",
+      "https://www.linkedin.com/in/filippogaleazzi/",
+      "https://www.linkedin.com/in/mkrupyshev/",
+      "https://www.linkedin.com/in/nirsoffer/"
+    ],
+    "hasOccupation": [
+      {
+        "@type": "OrganizationRole",
+        "roleName": "Lead Software Engineer",
+        "startDate": "2021-03",
+        "endDate": "2024-03",
+        "description": "role description",
+        "url": "/occupation/lead_software_engineer@wrd_wobben",
+        "alumniOf": {
+          "@type": "Corporation",
+          "name": "WRD Wobben Research and Development GmbH",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "DE",
+            "addressLocality": "Aurich",
+            "streetAddress": "Borsigstraße 26",
+            "addressRegion": "Lower Saxony",
+            "postalCode": "26607"
+          },
+          "sameAs": "https://enercon.de"
+        },
+        "occupationalCategory": {
+          "@type": "CategoryCode",
+            "inCodeSet": {
+              "@type": "CategoryCodeSet",
+              "name": "O*Net-SOC",
+              "dateModified": "2019",
+              "url": "https://www.onetonline.org/"
+            },
+          "codeValue": "15-1252.00",
+          "name": "Software Developers",
+          "url": "https://www.onetonline.org/link/summary/15-1252.00"
+        },
+        "responsibilities": [
+          "Introduce WRD Wobben Research and Development GmbH to the XXI century technology, architecture, and project management approaches to ensure it builds its highest quality software and the software is cheap to maintain and enhance",
+          "Establish a hardware Laboratory to conduct technological research"
+        ],
+        "skills": [
+          "agile project management",
+          "agile product development",
+          "innovations",
+          "tech research",
+          "software prototyping",
+          "C#",
+          "Microsoft SQL Server",
+          "Docker",
+          "Kubernetes",
+          "system architecture",
+          "SvelteKit",
+          "NodeJs",
+          "Javascript",
+          "CSS",
+          "FreeBSD"
+        ]
+      },
+      {
+        "@type": "OrganizationRole",
+        "roleName": "Tech Lead and CTO",
+        "startDate": "2021-03",
+        "endDate": "2021-12",
+        "description": "role description",
+        "alumniOf": {
+          "@type": "Corporation",
+          "name": "Coinhaven OU",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "EE",
+            "addressLocality": "Tallin",
+            "streetAddress": "Harjumaa"
+          },
+          "sameAs": "https://coinhaven.com"
+        },
+        "occupationalCategory": {
+          "@type": "CategoryCode",
+            "inCodeSet": {
+              "@type": "CategoryCodeSet",
+              "name": "O*Net-SOC",
+              "dateModified": "2019",
+              "url": "https://www.onetonline.org/"
+            },
+          "codeValue": "11-1011.00",
+          "name": "Chief Executives",
+          "url": "https://www.onetonline.org/link/summary/11-1011.00"
+        },
+        "responsibilities": [
+          "Build secure and fast crypto trading platform",
+          "Establish agile practices in software development",
+          "Ensure system architecture is scalable",
+          "Ensure the trading platform is cheap to maintain and enhance",
+          "Establish technological vision",
+          "Manage front-end, back-end, block chain and DevOps departments"
+        ],
+        "skills": [
+          "agile project management",
+          "agile product development",
+          "innovations",
+          "tech research",
+          "software prototyping",
+          "Docker",
+          "Kubernetes",
+          "system architecture",
+          "SvelteKit",
+          "NodeJs",
+          "Javascript",
+          "CSS",
+          "FreeBSD"
+        ]
+      },
+      {
+        "@type": "OrganizationRole",
+        "roleName": "CTO",
+        "startDate": "2018-08",
+        "endDate": "2018-08",
+        "description": "role description",
+        "alumniOf": {
+          "@type": "Corporation",
+          "name": "Deneb Kaitos UG",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "DE",
+            "addressLocality": "Berlin",
+            "streetAddress": "Albrechtstr. 74",
+            "addressRegion": "Brandenburg",
+            "postalCode": "12167"
+          },
+          "sameAs": "https://denebkaitos.tech"
+        },
+        "occupationalCategory": {
+          "@type": "CategoryCode",
+            "inCodeSet": {
+              "@type": "CategoryCodeSet",
+              "name": "O*Net-SOC",
+              "dateModified": "2019",
+              "url": "https://www.onetonline.org/"
+            },
+          "codeValue": "11-1011.00",
+          "name": "Chief Executives",
+          "url": "https://www.onetonline.org/link/summary/11-1011.00"
+        },
+        "responsibilities": [
+        ],
+        "skills": [
+          "agile project management",
+          "agile product development",
+          "innovations",
+          "tech research",
+          "Docker",
+          "Kubernetes",
+          "system architecture",
+          "SvelteKit",
+          "NodeJs",
+          "Javascript",
+          "CSS",
+          "FreeBSD"
+        ]
+      },
+      {
+        "@type": "OrganizationRole",
+        "roleName": "Microservice Developer",
+        "startDate": "2018-03",
+        "endDate": "2018-08",
+        "description": "role description",
+        "alumniOf": {
+          "@type": "Corporation",
+          "name": "Frontier Car Group GmbH",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "DE",
+            "addressLocality": "Berlin",
+            "streetAddress": "Karl-Liebknecht-Str. 29/12. OG",
+            "addressRegion": "Berlin",
+            "postalCode": "10178"
+          },
+          "sameAs": "https://frontiercargroup.com"
+        },
+        "occupationalCategory": {
+          "@type": "CategoryCode",
+            "inCodeSet": {
+              "@type": "CategoryCodeSet",
+              "name": "O*Net-SOC",
+              "dateModified": "2019",
+              "url": "https://www.onetonline.org/"
+            },
+          "codeValue": "15-1252.00",
+          "name": "Software Developers",
+          "url": "https://www.onetonline.org/link/summary/15-1252.00"
+        },
+        "responsibilities": [
+          "Build and maintain microservices for the company's auction server"
+        ],
+        "skills": [
+          "Docker",
+          "NodeJs",
+          "Javascript"
+        ]
+      },
+      {
+        "@type": "OrganizationRole",
+        "roleName": "Lead Software Engineer",
+        "startDate": "2016-11",
+        "endDate": "2017-12",
+        "description": "role description",
+        "alumniOf": {
+          "@type": "Corporation",
+          "name": "Eine",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "DE",
+            "addressLocality": "Berlin",
+            "streetAddress": "Ohlauer Str. 43, 10999",
+            "addressRegion": "Berlin",
+            "postalCode": "10999"
+          },
+          "sameAs": "https://eine.de"
+        },
+        "occupationalCategory": {
+          "@type": "CategoryCode",
+            "inCodeSet": {
+              "@type": "CategoryCodeSet",
+              "name": "O*Net-SOC",
+              "dateModified": "2019",
+              "url": "https://www.onetonline.org/"
+            },
+          "codeValue": "15-1252.00",
+          "name": "Software Developers",
+          "url": "https://www.onetonline.org/link/summary/15-1252.00"
+        },
+        "responsibilities": [
+          "Design and develop banking transaction analytical system",
+          "Coordinate activities of mathematicians and software developers",
+          "Ensure high quality software is built",
+          "Maintain regular production deployments",
+          "Organize data ingestion, data cleaning and filtering"
+        ],
+        "skills": [
+          "Docker",
+          "NodeJs",
+          "Javascript",
+          "Python",
+          "React",
+          "Redux",
+          "Redux-Saga",
+          "NGINX",
+          "RabbitMQ",
+          "Neo4j",
+          "Redis"
+        ]
+      },
+      {
+        "@type": "OrganizationRole",
+        "roleName": "Lead Software Engineer",
+        "startDate": "2016-03",
+        "endDate": "2016-11",
+        "description": "role description",
+        "alumniOf": {
+          "@type": "Corporation",
+          "name": "Cubits",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "DE",
+            "addressLocality": "Berlin",
+            "streetAddress": "Ohlauer Str. 43",
+            "addressRegion": "Berlin",
+            "postalCode": "10999"
+          },
+          "sameAs": "https://cubits.com"
+        },
+        "occupationalCategory": {
+          "@type": "CategoryCode",
+            "inCodeSet": {
+              "@type": "CategoryCodeSet",
+              "name": "O*Net-SOC",
+              "dateModified": "2019",
+              "url": "https://www.onetonline.org/"
+            },
+          "codeValue": "15-1252.00",
+          "name": "Software Developers",
+          "url": "https://www.onetonline.org/link/summary/15-1252.00"
+        },
+        "responsibilities": [
+          "Re-architecture and reimplement existing analytical system",
+          "Ensure the analytical system is scalable and robust",
+          "Implement live search for transaction and customer info",
+          "Ensure real-time data transfer between the web application and the back-end"
+        ],
+        "skills": [
+          "Docker",
+          "NodeJs",
+          "Websockets",
+          "Javascript",
+          "Python",
+          "Django",
+          "React",
+          "Redux",
+          "Redux-Saga",
+          "NGINX",
+          "RabbitMQ",
+          "Redis"
+        ]
+      },
+      {
+        "@type": "OrganizationRole",
+        "roleName": "Full-Stack Developer",
+        "startDate": "2015-09",
+        "endDate": "2015-12",
+        "description": "role description",
+        "alumniOf": {
+          "@type": "Corporation",
+          "name": "Videopath",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "DE",
+            "addressLocality": "Berlin",
+            "streetAddress": "Friedelstraße 40",
+            "addressRegion": "Berlin",
+            "postalCode": "12047"
+          },
+          "sameAs": "https://videopath.com"
+        },
+        "occupationalCategory": {
+          "@type": "CategoryCode",
+            "inCodeSet": {
+              "@type": "CategoryCodeSet",
+              "name": "O*Net-SOC",
+              "dateModified": "2019",
+              "url": "https://www.onetonline.org/"
+            },
+          "codeValue": "15-1252.00",
+          "name": "Software Developers",
+          "url": "https://www.onetonline.org/link/summary/15-1252.00"
+        },
+        "responsibilities": [
+          "Re-architecture and reimplement existing video transcoding system",
+          "Ensure the system is capable of handling hundreds of transcoding transactions"
+        ],
+        "skills": [
+          "AWS",
+          "Docker",
+          "Python"
+        ]
+      },
+      {
+        "@type": "OrganizationRole",
+        "roleName": "Analyst Principal",
+        "startDate": "2011-10",
+        "endDate": "2015-03",
+        "description": "role description",
+        "alumniOf": {
+          "@type": "Corporation",
+          "name": "ZeeRabbit GmbH",
+          "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "DE",
+            "addressLocality": "Berlin",
+            "streetAddress": "Brandenburgische Str. 27",
+            "addressRegion": "Berlin",
+            "postalCode": "10707"
+          },
+          "sameAs": "https://zeerabbit.com"
+        },
+        "occupationalCategory": {
+          "@type": "CategoryCode",
+            "inCodeSet": {
+              "@type": "CategoryCodeSet",
+              "name": "O*Net-SOC",
+              "dateModified": "2019",
+              "url": "https://www.onetonline.org/"
+            },
+          "codeValue": "13-1161.00",
+          "name": "Market Research Analysts and Marketing Specialists",
+          "url": "https://www.onetonline.org/link/summary/13-1161.00"
+        },
+        "responsibilities": [
+          "Establish product vision",
+          "Define and manage the general analysis processes",
+          "Interface with the customers to collect customer feedback",
+          "Conduct technological research for the company to employ best in the class tools and approaches",
+          "Organize development of data batch processing",
+          "Design the overall system architecture",
+          "Manage software documentation, including but not limited to the company's API",
+          "Prepare business and technical presentations",
+          "Manage outsource software development team",
+          "Oversee server management",
+          "Develop and support CI/CD pipelines"
+        ],
+        "skills": [
+          "technological research and innovations",
+          "ZeroC I.C.E.",
+          "Hadoop",
+          "Python",
+          "PostgreSQL",
+          "Debian Linux"
+        ]
+      }
+    ]
+  }
+}

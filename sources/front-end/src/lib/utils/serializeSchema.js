@@ -1,0 +1,1 @@
+export const serializeSchema = (thing) => `<script type="application/ld+json">${JSON.stringify(thing)}</script>`;
