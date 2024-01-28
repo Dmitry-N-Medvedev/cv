@@ -142,7 +142,7 @@
             "addressCountry": "DE",
             "addressLocality": "Aurich",
             "streetAddress": "Borsigstraße 26",
-            "addressRegion": "Lower Saxony",
+            "addressRegion": "Niedersachsen",
             "postalCode": "26607"
           },
           "sameAs": "https://enercon.de"
@@ -194,6 +194,7 @@
             "@type": "PostalAddress",
             "addressCountry": "EE",
             "addressLocality": "Tallin",
+            "addressRegion": "Estonia",
             "streetAddress": "Harjumaa"
           },
           "sameAs": "https://coinhaven.com"
@@ -248,7 +249,7 @@
             "addressCountry": "DE",
             "addressLocality": "Berlin",
             "streetAddress": "Albrechtstr. 74",
-            "addressRegion": "Brandenburg",
+            "addressRegion": "Berlin",
             "postalCode": "12167"
           },
           "sameAs": "https://denebkaitos.tech"
