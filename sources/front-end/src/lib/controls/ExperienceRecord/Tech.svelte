@@ -30,7 +30,7 @@
 
   .tech > .tech-languages {
     grid-area: languages;
-    display: contents;
+    /* display: contents; */
   }
 </style>
 

@@ -9,141 +9,142 @@
 
 <style>
   .occupation {
+    --occupation-gap: var(--gap);
+
     display: grid;
     grid-template-areas:
-      'company-info'
       'job-info'
+      'short-overview'
       'responsibilities'
-      'skills'
     ;
-    gap: calc(var(--gap) * 2);
-    padding: var(--gap) 0;
-  }
+    gap: var(--occupation-gap);
 
-  /* .occupation:not(:last-of-type)::after {
-    content: '\2218 \2218 \2218';
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 2rem;
-    font-size: 5rem;
-    color: var(--main-color);
-  } */
-
-  :is(.company-info, .company-name, .company-city, .job-info, .job-time-span, .job-time-span-start, .job-time-span-end) {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    gap: var(--gap);
-  }
-
-  .company-info {
-    grid-area: company-info;
-    /* font-size: 1.25rem; */
+    container-name: occupation;
+    container-type: inline-size;
   }
 
   .job-info {
     grid-area: job-info;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    grid-template-areas:
+      'job-info-left job-info-right'
+    ;
+    gap: var(--occupation-gap);
   }
 
-  .job-title {
-    font-size: 1.5rem;
+  .job-info > .job-info-left {
+    grid-area: job-info-left;
+    justify-content: start;
   }
 
-  .job-time-span {
-    gap: calc(var(--gap) / 3);
-  }
-  
-  .company-city-locality::after {
-    content: ",";
+  .job-info > .job-info-left > span:not(:last-of-type)::after {
+    content: ", ";
+    position: relative;
   }
 
-  .description {
-    grid-area: description;
+  .job-info > .job-info-right {
+    grid-area: job-info-right;
+    justify-content: end;
+  }
+
+  .job-info > :is(.job-info-left, .job-info-right) {
+    display: flex;
+    align-items: center;
+    gap: var(--occupation-gap);
+  }
+
+  .job-time-span-start::after {
+    content: '\2013';
+    position: relative;
+    left: calc(var(--occupation-gap) / 2);
+  }
+
+  .short-overview {
+    font-style: italic;
   }
 
   .responsibilities {
     grid-area: responsibilities;
   }
 
-  .skills {
-    grid-area: skills;
-  }
-
-  :is(.responsibilities, .skills) {
-    display: grid;
-    grid-auto-flow: row;
-    gap: var(--gap);
-  }
-
-  :is(.responsibilities > ul, .skills > ul) {
-    display: grid;
-    gap: calc(var(--gap) / 2);
-  }
-
-  :is(.responsibilities li, .skills li) {
-    display: flex;
-    flex: 1 0 auto;
-    min-height: 2.5rem;
-    justify-content: start;
-    align-items: center;
-  }
-
   .responsibilities > ul {
-    grid-template-columns: 1fr;
+    list-style-position: inside;
+    padding-left: calc(var(--occupation-gap) / 2);
   }
 
-  .skills > ul {
-    grid-template-columns: repeat(4, 1fr);
+  @container occupation (width <= 850px) {
+    .job-info {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 
-  .title {
-    color: var(--theme-light_gray_bright);
+  @container occupation (width <= 1750px) {
+    .job-info {
+      grid-template-columns: 2fr 1fr;
+    }
+
+    .job-info > .job-info-left {
+      display: grid;
+      grid-template-areas:
+        'job-title job-title job-title'
+        'company-name company-city-locality company-city-region'
+      ;
+      gap: 0px;
+    }
+
+    .job-title {
+      grid-area: job-title;
+      padding: 0;
+    }
+
+    .company-name {
+      grid-area: company-name;
+    }
+
+    .company-city-locality {
+      grid-area: company-city-locality;
+    }
+
+    .company-city-region {
+      grid-area: company-city-region;
+    }
   }
 </style>
 
 <article class="occupation">
-  <div class="company-info">
-    <div class="company-name">
-      <a href={occupation.alumniOf.sameAs} target="_blank">
-        {occupation.alumniOf.name}
-      </a>
-    </div>
-    <div class="company-city">
-      <div class="company-city-locality">
-        {occupation.alumniOf.address.addressLocality}
-      </div>
-      <div class="company-city-region">
-        {occupation.alumniOf.address.addressRegion}
-      </div>
-    </div>
-  </div>
   <div class="job-info">
-    <h4 class="job-title">
-      {occupation.roleName}
-    </h4>
-    <div class="job-time-span">
-      <div class="job-time-span-start">{occupation.startDate}</div>
-      <div class="job-time-span-devider">..</div>
-      <div class="job-time-span-end">{occupation.endDate}</div>
+    <div class="job-info-left">
+      <h4 class="job-title">
+        {occupation.roleName}
+      </h4>
+      <span class="company-name">
+        {occupation.alumniOf.name}
+      </span>
+      <span class="company-city-locality">
+        {occupation.alumniOf.address.addressLocality}
+      </span>
+      <span class="company-city-region">
+        {occupation.alumniOf.address.addressRegion}
+      </span>
+    </div>
+    <div class="job-info-right">
+      <span class="job-time-span-start">{occupation.startDate}</span>
+      <span class="job-time-span-end">{occupation.endDate}</span>
     </div>
   </div>
-  <!-- <div class="description">
-    {occupation.description}
-  </div> -->
+  <div class="short-overview">
+    {#each occupation.description as descr}
+      <p>
+        {descr}     
+      </p>
+    {/each}
+  </div>
   <div class="responsibilities">
-    <h4 class="title">responsibilities</h4>
+    <h5 class="title">results</h5>
     <ul>
       {#each occupation.responsibilities as r}
         <li>{r}</li>
-      {/each}
-    </ul>
-  </div>
-  <div class="skills">
-    <h4 class="title">skills</h4>
-    <ul>
-      {#each occupation.skills as s}
-        <li>{s}</li>
       {/each}
     </ul>
   </div>

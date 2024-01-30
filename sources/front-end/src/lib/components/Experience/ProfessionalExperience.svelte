@@ -55,48 +55,5 @@
     {#each processedSchema.mainEntity.hasOccupation as occupation}
       <Occupation {occupation} />
     {/each}
-    <!-- {#each ProfessionalExperience as experience(experience.id)}
-      <ExperienceRecord>
-        <div slot="workTimeFrom">Mar 2021</div>
-        <div slot="workTimeTo">Feb 2023</div>
-        <div slot="company-name">
-          <a href={experience.company.link} target="_blank">{experience.company.name}</a>
-        </div>
-        <div slot="company-city">Berlin</div>
-        <div slot="short-description">{experience.short_description}</div>
-        <h4 slot="position">{experience.position.name}</h4>
-        <ul slot="responsibilities">
-          {#each experience.responsibilities as responsibility}
-            <li class="responsibility">{responsibility}</li>
-          {/each}
-        </ul>
-        <ul slot="results">
-          {#each experience.results as result}
-            <li class="result">{result}</li> 
-          {/each}
-        </ul>
-        <div slot="team-size">{experience.team.size}</div>
-        <ul slot="tech-languages" class="tech-languages">
-          {#each experience.tech.stack.languages as language}
-            <li class="language">{language}</li> 
-          {/each}
-        </ul>
-        <ul slot="tech-databases" class="tech-databases">
-          {#each experience.tech.stack.databases as database}
-            <li class="database">{database}</li> 
-          {/each}
-        </ul>
-        <ul slot="tech-os" class="tech-os">
-          {#each experience.tech.stack.os as os}
-            <li class="os">{os}</li> 
-          {/each}
-        </ul>
-        <ul slot="tech-tools" class="tech-tools">
-          {#each experience.tech.stack.tools as tool}
-            <li class="tool">{tool}</li> 
-          {/each}
-        </ul>
-      </ExperienceRecord>
-    {/each} -->
   </div>
 </SectionWithCaption>
