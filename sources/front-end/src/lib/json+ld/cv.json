@@ -7,12 +7,14 @@
     "name": "Dmitry N Medvedev",
     "givenName": "Dmitry",
     "familyName": "Medvedev",
+    "additionalName": "N",
     "gender": "https://schema.org/Male",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Berlin"
     },
     "email": "dmitry.medvedev@gmail.com",
+    "telephone": "+4917665213116",
     "image": "https://dmitry-n-medvedev.denebkaitos.tech/dmitry-n-medvedev.jpeg",
     "url": "https://dmitry-n-medvedev.denebkaitos.tech",
     "sameAs": [
@@ -65,7 +67,7 @@
         "name": "CTO",
         "alternateName": "Director of Engineering",
         "description": "I am fully committed to offer my client...",
-        "url": "https://dmitry-n-medvedev.denebkaitos.tech/offer/cto",
+        "url": "/offer/cto",
         "itemOffered": [
           {
             "@type": "Service",
@@ -80,7 +82,36 @@
             }
           }
         ]
+      },
+      {
+        "@type": "Offer",
+        "businessFunction": "http://purl.org/goodrelations/v1#ProvideService",
+        "eligibleCustomerType": "http://purl.org/goodrelations/v1#Business",
+        "eligibleRegion": "Germany",
+        "name": "Project Manager",
+        "alternateName": "Project Manager",
+        "description": "I am fully committed to offer my client...",
+        "url": "/offer/cto",
+        "itemOffered": [
+          {
+            "@type": "Service",
+            "areaServed": "Germany",
+            "serviceType": "management",
+            "termsOfService": "https://dmitry-n-medvedev.denebkaitos.tech/tos/pm",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": 75000,
+              "maxPrice": 80000,
+              "priceCurrency": "EUR"
+            }
+          }
+        ]
       }
+    ],
+    "description": [
+      "professiona summary line #0",
+      "professiona summary line #1",
+      "professiona summary line #2"
     ],
     "hasCredential": [
       {
@@ -129,14 +160,18 @@
     "hasOccupation": [
       {
         "@type": "OrganizationRole",
-        "roleName": "Lead Software Engineer",
+        "roleName": "Senior Software Engineer",
         "startDate": "2021-03",
         "endDate": "2024-03",
-        "description": "role description",
+        "description": [
+          "role description 0",
+          "role description 1",
+          "role description 2"
+        ],
         "url": "/occupation/lead_software_engineer@wrd_wobben",
         "alumniOf": {
           "@type": "Corporation",
-          "name": "WRD Wobben Research and Development GmbH",
+          "name": "WRD Wobben R&D",
           "address": {
             "@type": "PostalAddress",
             "addressCountry": "DE",
@@ -186,7 +221,11 @@
         "roleName": "Tech Lead and CTO",
         "startDate": "2021-03",
         "endDate": "2021-12",
-        "description": "role description",
+        "description": [
+          "role description 0",
+          "role description 1",
+          "role description 2"
+        ],
         "alumniOf": {
           "@type": "Corporation",
           "name": "Coinhaven OU",
@@ -240,7 +279,11 @@
         "roleName": "CTO",
         "startDate": "2018-08",
         "endDate": "2018-08",
-        "description": "role description",
+        "description": [
+          "role description 0",
+          "role description 1",
+          "role description 2"
+        ],
         "alumniOf": {
           "@type": "Corporation",
           "name": "Deneb Kaitos UG",
@@ -288,10 +331,14 @@
         "roleName": "Microservice Developer",
         "startDate": "2018-03",
         "endDate": "2018-08",
-        "description": "role description",
+        "description": [
+          "role description 0",
+          "role description 1",
+          "role description 2"
+        ],
         "alumniOf": {
           "@type": "Corporation",
-          "name": "Frontier Car Group GmbH",
+          "name": "Frontier Car Group",
           "address": {
             "@type": "PostalAddress",
             "addressCountry": "DE",
@@ -328,7 +375,11 @@
         "roleName": "Lead Software Engineer",
         "startDate": "2016-11",
         "endDate": "2017-12",
-        "description": "role description",
+        "description": [
+          "role description 0",
+          "role description 1",
+          "role description 2"
+        ],
         "alumniOf": {
           "@type": "Corporation",
           "name": "Eine",
@@ -380,7 +431,11 @@
         "roleName": "Lead Software Engineer",
         "startDate": "2016-03",
         "endDate": "2016-11",
-        "description": "role description",
+        "description": [
+          "role description 0",
+          "role description 1",
+          "role description 2"
+        ],
         "alumniOf": {
           "@type": "Corporation",
           "name": "Cubits",
@@ -432,7 +487,11 @@
         "roleName": "Full-Stack Developer",
         "startDate": "2015-09",
         "endDate": "2015-12",
-        "description": "role description",
+        "description": [
+          "role description 0",
+          "role description 1",
+          "role description 2"
+        ],
         "alumniOf": {
           "@type": "Corporation",
           "name": "Videopath",
@@ -473,7 +532,11 @@
         "roleName": "Analyst Principal",
         "startDate": "2011-10",
         "endDate": "2015-03",
-        "description": "role description",
+        "description": [
+          "role description 0",
+          "role description 1",
+          "role description 2"
+        ],
         "alumniOf": {
           "@type": "Corporation",
           "name": "ZeeRabbit GmbH",
