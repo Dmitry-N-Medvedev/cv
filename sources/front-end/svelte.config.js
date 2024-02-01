@@ -1,17 +1,25 @@
 import adapter from '@sveltejs/adapter-static';
 // import adapter from '@sveltejs/adapter-node';
 
-// import {
-//   PUBLIC_WS_PROTO,
-//   PUBLIC_WS_HOST,
-//   PUBLIC_WS_PORT,
-//
-//   PUBLIC_WEB_PROTO,
-//   PUBLIC_WEB_HOST,
-//   PUBLIC_WEB_PORT,
-//   PUBLIC_WEB_DEBUG_PORT,
-// } from '$env/static/public';
-//
+const quotableStatements = Object.freeze(['none', 'self', 'unsafe-inline']);
+
+const quote = (statement) => {
+  return quotableStatements.includes(statement) ? `'${statement}'`: statement;
+};
+const reportURI = `/csp-violation-report`;
+const cspDirectives = {
+  'default-src': ['self'],
+  'img-src': ['self'],
+  'font-src': ['self'],
+  'manifest-src': ['self'],
+  'style-src': ['self', 'unsafe-inline'],
+  'script-src': ['self', 'unsafe-inline'],
+  'connect-src': ['self'],
+  'report-uri': [reportURI],
+  'report-to': ['csp-violation-report'],
+};
+
+const DIRECTIVES = Object.entries(cspDirectives).map(([key, values]) => `${key} ${values.map((value) => `${quote(value)}`).join(' ')}`);
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -23,6 +31,7 @@ const config = {
       out: 'build',
       precompress: false,
       envPrefix: '',
+      strict: true,
     }),
     serviceWorker: {
       register: true,
@@ -32,27 +41,10 @@ const config = {
         server: 'src/files/hooks/hooks.server.js',
       },
     },
-    // csp: {
-    //   directives: {
-    //     'default-src': ['none'],
-    //     'img-src': ['self'],
-    //     'font-src': ['self'],
-    //     'manifest-src': ['self'],
-    //     'style-src': ['self', 'unsafe-inline'],
-    //     'script-src': ['self', 'unsafe-inline'],
-    //     // 'connect-src': [
-    //     //   'self',
-    //     //   // svelte front-end
-    //     //   `${PUBLIC_WEB_PROTO}://${PUBLIC_WEB_HOST}:${PUBLIC_WEB_PORT}`,
-    //     //   // svelte dev server's port
-    //     //   `${PUBLIC_WS_PROTO}://${PUBLIC_WEB_HOST}:${PUBLIC_WEB_DEBUG_PORT}`,
-    //     //   // API port
-    //     //   `${PUBLIC_WS_PROTO}://${PUBLIC_WS_HOST}:${PUBLIC_WS_PORT}`,
-    //     // ],
-    //
-    //   },
-    //   reportOnly: {},
-    // },
+    csp: {
+      directives: cspDirectives,
+      reportOnly: cspDirectives,
+    },
     env: {
       dir: './environments',
     },

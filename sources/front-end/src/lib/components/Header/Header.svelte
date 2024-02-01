@@ -54,15 +54,15 @@
 
   .header > h2 > .position:not(:last-of-type)::after{
     content: "\22C5";
-    font-size: 8.5rem;
+    font-size: 12cqi;
     line-height: 0;
     padding: 0 calc(var(--gap) * 2);
     text-decoration: none;
     position: relative;
     bottom: calc(var(--gap) / 4);
     color: var(--dimmed-header-color);
-    width: var(--gap);
-    right: 1.5rem;
+    /* width: var(--gap); */
+    /* right: 1.5rem; */
   }
 
   .header > nav {

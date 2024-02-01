@@ -1,7 +1,6 @@
 <script>
   import SectionWithCaption from "$lib/controls/SectionWithCaption/SectionWithCaption.svelte";
   import ExperienceRecord from "$lib/controls/ExperienceRecord/ExperienceRecord.svelte";
-  import ProfessionalExperience from '$lib/data/professionalExperience.json';
   import Occupation from "./Occupation.svelte";
   import cvSchema from '$lib/json+ld/cv.json';
   import {
@@ -37,7 +36,7 @@
   div[slot="content"] {
     display: grid;
     grid-auto-flow: row;
-    gap: calc(var(--gap) * 4);
+    gap: calc(var(--gap) * 8);
   }
 
   :is(.tech-languages, .tech-databases, .tech-os, .tech-tools) {

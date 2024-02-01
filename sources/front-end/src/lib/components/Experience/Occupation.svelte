@@ -18,9 +18,6 @@
       'responsibilities'
     ;
     gap: var(--occupation-gap);
-
-    container-name: occupation;
-    container-type: inline-size;
   }
 
   .job-info {
@@ -28,39 +25,67 @@
     display: grid;
     grid-template-columns: 5fr 1fr;
     grid-template-areas:
-      'job-info-left job-info-right'
+      'job-info-left job-info-right' 
     ;
-    gap: var(--occupation-gap);
+    gap: calc(var(--gap) / 2);
   }
 
-  .job-info > .job-info-left {
+  .job-info-left {
     grid-area: job-info-left;
+  }
+
+  .job-info-right {
+    grid-area: job-info-right;
+  }
+
+  :is(.job-info-left, .job-info-right) {
+    display: flex;
+    align-items: center;
+    gap: var(--gap);
+
+    container-type: inline-size;
+  }
+
+  .job-info-left {
+    flex-wrap: wrap;
     justify-content: start;
   }
 
-  .job-info > .job-info-left > span:not(:last-of-type)::after {
+  .job-info-right {
+    justify-content: space-between;
+  }
+
+  .job-time-span-start,
+  .job-time-span-end {
+    font-size: 10cqi;
+  }
+
+  .company-info {
+    display: flex;
+    flex: 1 0 auto;
+    container-type: inline-size;
+  }
+
+  .company-info > *:not(:last-of-type)::after {
     content: ", ";
     position: relative;
+    padding-right: calc(var(--gap) / 2);
   }
 
-  .job-info > .job-info-right {
-    grid-area: job-info-right;
-    justify-content: end;
+  .company-name,
+  .company-city-locality,
+  .company-city-region {
+    font-size: clamp(2.5cqi, 3cqi, 3.5cqi);
   }
 
-  .job-info > :is(.job-info-left, .job-info-right) {
-    display: flex;
-    align-items: center;
-    gap: var(--occupation-gap);
-  }
-
-  .job-time-span-start::after {
+  /* .job-time-span-start::after {
     content: '\2013';
     position: relative;
-    left: calc(var(--occupation-gap) / 2);
-  }
+    left: calc(var(--gap) * 2);
+  } */
 
   .short-overview {
+    grid-area: short-overview;
     font-style: italic;
   }
 
@@ -72,44 +97,6 @@
     list-style-position: inside;
     padding-left: calc(var(--occupation-gap) / 2);
   }
-
-  @container occupation (width <= 850px) {
-    .job-info {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-
-  @container occupation (width <= 1750px) {
-    .job-info {
-      grid-template-columns: 2fr 1fr;
-    }
-
-    .job-info > .job-info-left {
-      display: grid;
-      grid-template-areas:
-        'job-title job-title job-title'
-        'company-name company-city-locality company-city-region'
-      ;
-      gap: 0px;
-    }
-
-    .job-title {
-      grid-area: job-title;
-      padding: 0;
-    }
-
-    .company-name {
-      grid-area: company-name;
-    }
-
-    .company-city-locality {
-      grid-area: company-city-locality;
-    }
-
-    .company-city-region {
-      grid-area: company-city-region;
-    }
-  }
 </style>
 
 <article class="occupation">
@@ -118,15 +105,17 @@
       <h4 class="job-title">
         {occupation.roleName}
       </h4>
-      <span class="company-name">
-        {occupation.alumniOf.name}
-      </span>
-      <span class="company-city-locality">
-        {occupation.alumniOf.address.addressLocality}
-      </span>
-      <span class="company-city-region">
-        {occupation.alumniOf.address.addressRegion}
-      </span>
+      <div class="company-info">
+        <span class="company-name">
+          {occupation.alumniOf.name}
+        </span>
+        <span class="company-city-locality">
+          {occupation.alumniOf.address.addressLocality}
+        </span>
+        <span class="company-city-region">
+          {occupation.alumniOf.address.addressRegion}
+        </span>
+      </div>
     </div>
     <div class="job-info-right">
       <span class="job-time-span-start">{occupation.startDate}</span>
