@@ -16,8 +16,8 @@
     ;
     gap: 1rem;
     min-height: 100svh;
-    max-width: 50%;
     margin: 0 auto;
+    max-width: 50%;
   }
 
   .header-container {
@@ -51,13 +51,9 @@
   extra large:  1200px < W
 */
 
-  @container body (width > 0px) and (width <= 600px) {
+  /* @container body (width > 0px) and (width <= 600px) {
     :root {
       --main-font-size: calc(16pt * var(--pt-to-rem-coef));
-    }
-    
-    .layout-root {
-      max-width: 98%;
     }
   }
 
@@ -65,19 +61,11 @@
     :root {
       --main-font-size: calc(19pt * var(--pt-to-rem-coef));
     }
- 
-    .layout-root {
-      max-width: 98%;
-    }
   }
 
   @container body (width > 768px) and (width <= 992px) {
     :root {
       --main-font-size: calc(19pt * var(--pt-to-rem-coef));
-    }
-    
-    .layout-root {
-      max-width: 98%;
     }
   }
 
@@ -85,15 +73,17 @@
     :root {
       --main-font-size: calc(20pt * var(--pt-to-rem-coef));
     }
+  } */
 
+  @container body (width <= 2500px) {
     .layout-root {
-      max-width: 98%;
+       max-width: 75%;
     }
   }
 
-  @container body (width <= 2500px) and (width > 1200px) {
+  @container body (width <= 768px) {
     .layout-root {
-       max-width: 75%;
+      max-width: 85%;
     }
   }
 </style>
