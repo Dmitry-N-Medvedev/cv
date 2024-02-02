@@ -18,7 +18,7 @@ const reportURI = `${PUBLIC_WEB_PROTO}://${PUBLIC_WS_HOST}:${PUBLIC_WS_PORT}/csp
 // const reportURI = '/csp-violation-report';
 const cspDirectives = {
   'default-src': ['self'],
-  'img-src': ['self'],
+  'img-src': ['self', 'chart.googleapis.com'],
   'font-src': ['self'],
   'manifest-src': ['self'],
   'style-src': ['self', 'unsafe-inline'],

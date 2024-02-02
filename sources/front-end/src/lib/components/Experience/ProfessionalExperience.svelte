@@ -36,7 +36,7 @@
   div[slot="content"] {
     display: grid;
     grid-auto-flow: row;
-    gap: calc(var(--gap) * 8);
+    gap: var(--list-gap);
   }
 
   :is(.tech-languages, .tech-databases, .tech-os, .tech-tools) {

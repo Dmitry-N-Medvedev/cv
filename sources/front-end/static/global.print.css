@@ -17,6 +17,7 @@
   --footer-background-color: transparent;
   /* --gap: calc(var(--main-font-size) * 1); */
   --gap: calc(1cqi);
+  --list-gap: calc(var(--gap) * 8);
     
   --main-color: var(#000000);
   --main-background-color: var(#ffffff);
@@ -128,6 +129,10 @@ aside {
 
 ul {
   page-break-inside: avoid;
+}
+
+abbr {
+  text-decoration: none;
 }
 
 @page {
