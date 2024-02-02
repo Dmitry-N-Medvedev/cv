@@ -77,7 +77,7 @@
     justify-content: center;
     align-items: center;
     gap: var(--gap);
-    font-size: 2cqw;
+    /* font-size: 2cqw; */
   }
   
   .header > .contacts > div {
@@ -90,6 +90,7 @@
     left: calc(var(--gap) / 2);
     color: var(--dimmed-header-color);
   }
+
 
   @container header (width <= 1400px) {
     .header > .contacts > .locality {
@@ -129,6 +130,45 @@
     .header > .contacts > .linkedin {
       grid-area: linkedin;
       justify-content: center;
+    }
+  }
+
+  @media print {
+    .header > .contacts {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+      font-size: unset;
+    }
+
+    .header h1::after {
+      content: url(https://chart.googleapis.com/chart?cht=qr&chs=150x150&chl=https://dmitry-n-medvedev.denebkaitos.tech&choe=UTF-8);
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    .header > h2 > .position:not(:last-of-type)::after{
+      font-size: 5cqi;
+    }
+
+    .header > .contacts > :is(.telephone, .email, .linkedin) {
+      justify-content: start !important;
+      align-items: center !important;
+    }
+
+    :is(.telephone, .email)::before {
+      padding-right: var(--gap);
+      position: relative;
+    }
+
+    .telephone::before {
+      content: "tel.:";
+    }
+
+    .email::before {
+      content: "email:";
     }
   }
 </style>
