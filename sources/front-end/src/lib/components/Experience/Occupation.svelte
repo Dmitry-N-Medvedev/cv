@@ -97,6 +97,14 @@
     list-style-position: inside;
     padding-left: calc(var(--occupation-gap) / 2);
   }
+
+  @media print {
+    .company-name,
+    .company-city-locality,
+    .company-city-region {
+      font-size: unset;
+    }
+  }
 </style>
 
 <article class="occupation">

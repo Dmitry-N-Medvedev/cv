@@ -86,6 +86,15 @@
       max-width: 85%;
     }
   }
+
+  @media print {
+    .layout-root {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      max-width: unset;
+    }
+  }
 </style>
 
 <div class="layout-root">
