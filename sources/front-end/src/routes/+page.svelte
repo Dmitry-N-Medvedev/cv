@@ -3,6 +3,7 @@
   import ProfessionalSummary from '$lib/components/Experience/ProfessionalSummary.svelte';
   import ProfessionalExperience from '$lib/components/Experience/ProfessionalExperience.svelte';
   import AreasOfExpertise from '$lib/components/AreasOfExpertise/AreasOfExpertise.svelte';
+  import Training from '$lib/components/Training/Training.svelte';
 
   const robots = ['index', 'follow', 'noarchive'].join(',');
   const positions = cvSchema.mainEntity.makesOffer.map((o) => o.alternateName);
@@ -43,8 +44,9 @@
   }
 </style>
 
-<article class="experience">
+<article class="experience hresume">
   <ProfessionalSummary />
   <AreasOfExpertise />
   <ProfessionalExperience />
+  <Training />
 </article>

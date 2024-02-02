@@ -58,6 +58,7 @@
   .job-time-span-start,
   .job-time-span-end {
     font-size: 10cqi;
+    text-decoration: none;
   }
 
   .company-info {
@@ -107,14 +108,14 @@
   }
 </style>
 
-<article class="occupation">
+<article class="occupation vevent">
   <div class="job-info">
     <div class="job-info-left">
-      <h4 class="job-title">
+      <h4 class="job-title summary">
         {occupation.roleName}
       </h4>
       <div class="company-info">
-        <span class="company-name">
+        <span class="company-name location">
           {occupation.alumniOf.name}
         </span>
         <span class="company-city-locality">
@@ -126,8 +127,8 @@
       </div>
     </div>
     <div class="job-info-right">
-      <span class="job-time-span-start">{occupation.startDate}</span>
-      <span class="job-time-span-end">{occupation.endDate}</span>
+      <abbr class="job-time-span-start dtstart" title={occupation.startDate}>{occupation.startDate}</abbr>
+      <abbr class="job-time-span-end dtend" title={occupation.endDate}>{occupation.endDate}</abbr>
     </div>
   </div>
   <div class="short-overview">

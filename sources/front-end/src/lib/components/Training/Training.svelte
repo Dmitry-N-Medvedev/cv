@@ -4,7 +4,7 @@
 
 <SectionWithCaption>
   <h3 slot="caption">training</h3>
-  <div slot="content">
+  <div slot="content" class="education">
     training content
   </div>
 </SectionWithCaption>

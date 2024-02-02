@@ -5,7 +5,7 @@
 
 <SectionWithCaption>
   <h3 slot="caption">professional summary</h3>
-  <div slot="content">
+  <div slot="content" class="summary">
     {#each cvSchema.mainEntity.description as summaryLine}
       <p>
         {summaryLine}  
