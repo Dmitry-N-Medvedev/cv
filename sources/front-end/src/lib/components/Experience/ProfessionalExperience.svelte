@@ -50,7 +50,7 @@
 
 <SectionWithCaption>
   <h3 slot="caption">professional experience</h3>
-  <div slot="content">
+  <div slot="content" class="vcalendar">
     {#each processedSchema.mainEntity.hasOccupation as occupation}
       <Occupation {occupation} />
     {/each}

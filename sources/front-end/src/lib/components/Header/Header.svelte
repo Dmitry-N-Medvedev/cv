@@ -18,6 +18,7 @@
 
     container-name: header;
     container-type: inline-size;
+    font-style: normal;
   }
 
 
@@ -105,7 +106,7 @@
   @container header (width <= 1250px) {
     .header > .contacts {
       grid-template-areas:
-        'telephone email'
+        'tel email'
         'linkedin linkedin'
       ;
       grid-auto-columns: 1fr;
@@ -117,8 +118,8 @@
       align-items: center;
     }
 
-    .header > .contacts > .telephone {
-      grid-area: telephone;
+    .header > .contacts > .tel {
+      grid-area: tel;
       justify-content: end;
     }
 
@@ -153,17 +154,17 @@
       font-size: 5cqi;
     }
 
-    .header > .contacts > :is(.telephone, .email, .linkedin) {
+    .header > .contacts > :is(.tel, .email, .linkedin) {
       justify-content: start !important;
       align-items: center !important;
     }
 
-    :is(.telephone, .email)::before {
+    :is(.tel, .email)::before {
       padding-right: var(--gap);
       position: relative;
     }
 
-    .telephone::before {
+    .tel::before {
       content: "tel.:";
     }
 
@@ -173,11 +174,17 @@
   }
 </style>
 
-<div class="header">
-  <h1>
-    {cvSchema.mainEntity.givenName} 
-    {cvSchema.mainEntity.additionalName}
-    {cvSchema.mainEntity.familyName}
+<address class="header vcard">
+  <h1 class="n">
+    <span class="given-name">
+      {cvSchema.mainEntity.givenName} 
+    </span>
+    <span class="additional-name">
+      {cvSchema.mainEntity.additionalName}
+    </span>
+    <span class="family-name">
+      {cvSchema.mainEntity.familyName}
+    </span>
   </h1>
   <h2>
     {#each cvSchema.mainEntity.makesOffer as offer}
@@ -185,7 +192,7 @@
     {/each}
   </h2>
   <div class="contacts">
-    <div class="telephone">
+    <div class="tel">
       <a href="tel:{cvSchema.mainEntity.telephone}" target="_blank">
         {cvSchema.mainEntity.telephone} 
       </a>
@@ -205,4 +212,4 @@
     {/each}
   </div>
   <nav></nav>
-</div>
+</address>

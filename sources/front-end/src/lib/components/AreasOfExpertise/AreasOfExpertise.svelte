@@ -39,9 +39,9 @@
 
 <SectionWithCaption>
   <h3 slot="caption">areas of expertise</h3>
-  <div slot="content" class="areas-content">
+  <div slot="content" class="areas-content skills">
     {#each areas as area}
-      <div class="area">
+      <div class="area skill">
         {area}
       </div>
     {/each}
