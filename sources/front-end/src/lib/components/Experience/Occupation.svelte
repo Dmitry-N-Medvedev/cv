@@ -58,7 +58,6 @@
   .job-time-span-start,
   .job-time-span-end {
     font-size: 10cqi;
-    text-decoration: none;
   }
 
   .company-info {

@@ -4,7 +4,7 @@
 
   --main-font-family: "InterVariable";
   /* --main-font-size: calc(16pt * var(--pt-to-rem-coef)); */
-  --main-font-size: 1.125cqi;
+  --main-font-size: 1cqi;
   --main-font-weight: 400;
   --main-grid-gap: max(0.25vh, 0.25vw);
   --main-border-radius: max(0.25vh, 0.25vw);
@@ -17,6 +17,7 @@
   --footer-background-color: transparent;
   /* --gap: calc(var(--main-font-size) * 1); */
   --gap: calc(1cqi);
+  --list-gap: calc(var(--gap) * 8);
 }
 
 * {
@@ -114,6 +115,10 @@ a:visited {
     font-family: var(--main-font-family);
   }
 } */
+
+abbr {
+  text-decoration: none;
+}
 
 @media(prefers-color-scheme: light) {
   :root {
